@@ -232,7 +232,7 @@
             const password = document.getElementById('loginPassword').value;
 
             try {
-                const res = await fetch('/auth/login', {
+                const res = await fetch('https://localartist-824813376551.us-central1.run.app/auth/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -272,7 +272,7 @@
             formData.append('file', fileInput.files[0]);
 
             try {
-                const res = await fetch('/auth/register', {
+                const res = await fetch('https://localartist-824813376551.us-central1.run.app/auth/register', {
                     method: 'POST',
                     body: formData
                 });
@@ -291,5 +291,6 @@
     </script>
 
 </body>
+
 
 </html>
