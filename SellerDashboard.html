@@ -103,7 +103,42 @@
 
     <div class="chatbot" id="chatbotBtn">🤖</div>
 
-    
+        <script>
+         // redirect if token missing
+
+        const langSelect = document.getElementById('langSelect');
+        const heading = document.getElementById('heading');
+        const uploadArtBtn = document.getElementById('uploadArtBtn');
+        const chatbotBtn = document.getElementById('chatbotBtn');
+
+        const translations = {
+            en: {
+                heading: "🎨 Seller Dashboard",
+                uploadArt: "Upload Artwork"
+            },
+            hi: {
+                heading: "🎨 विक्रेता डैशबोर्ड",
+                uploadArt: "कलाकृति अपलोड करें"
+            },
+            kn: {
+                heading: "🎨 ಮಾರಾಟಗಾರ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+                uploadArt: "ಕಲಾಕೃತಿ ಅಪ್ಲೋಡ್ ಮಾಡಿ"
+            }
+        };
+
+        langSelect.addEventListener('change', () => {
+            const t = translations[langSelect.value];
+            heading.textContent = t.heading;
+            uploadArtBtn.textContent = t.uploadArt;
+        });
+
+        uploadArtBtn.addEventListener('click', () => {
+            window.location.href = "UploadArtwork.html";
+        });
+        chatbotBtn.addEventListener('click', () => {
+            window.location.href = "Chatbot.html";
+        });
+    </script>
 </body>
 
 </html>
